@@ -20,18 +20,8 @@ rd $officeSetupFiles -Force -Confirm:$false
 &$log
 sleep 10
 
-Write-Host "Instalando Foxit Pdf Reader..." -NoNewline
-$exitCode = Start-Process $PSScriptRoot\FoxitPDFReader20232.exe -ArgumentList "/sAll" -Wait -PassThru
-&$log
-sleep 10
-
 Write-Host "Instalando Chrome..." -NoNewline
 $exitCode = Start-Process $PSScriptRoot\chrome.msi -ArgumentList "/qn" -Wait -PassThru
-&$log
-sleep 10
-
-Write-Host "Instalando Firefox..." -NoNewline
-$exitCode = Start-Process $PSScriptRoot\Firefox Setup 117.0.1.exe -ArgumentList "/qn" -Wait -PassThru
 &$log
 sleep 10
 
